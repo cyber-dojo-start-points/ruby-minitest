@@ -1,14 +1,14 @@
-
 {
   "display_name": "Ruby, MiniTest",
   "image_name": "cyberdojofoundation/ruby_mini_test:0641114",
-  "visible_filenames":
-  [
+  "visible_filenames": [
     "test_hiker.rb",
     "hiker.rb",
     "cyber-dojo.sh",
     "coverage.rb"
   ],
-  "filename_extension": [ ".rb" ],
+  "filename_extension": [
+    ".rb"
+  ],
   "tab_size": 2
 }
