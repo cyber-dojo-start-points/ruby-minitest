@@ -4,8 +4,12 @@ require 'minitest/autorun'
 
 class TestHiker < MiniTest::Test
 
-  def test_life_the_universe_and_everything
-    assert_equal 42, answer
+  def test_global_function
+    assert_equal 42, global_answer
+  end
+
+  def test_instance_method
+    assert_equal 42, Hiker.new.instance_answer
   end
 
 end
