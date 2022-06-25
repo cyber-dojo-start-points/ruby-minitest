@@ -1,6 +1,6 @@
 {
   "display_name": "Ruby, MiniTest",
-  "image_name": "cyberdojofoundation/ruby_mini_test:48cf949",
+  "image_name": "cyberdojofoundation/ruby_mini_test:a074c0a",
   "visible_filenames": [
     "test_hiker.rb",
     "hiker.rb",
