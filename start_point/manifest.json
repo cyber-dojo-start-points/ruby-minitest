@@ -1,6 +1,6 @@
 {
-  "display_name": "Ruby, MiniTest",
-  "image_name": "cyberdojofoundation/ruby_mini_test:a074c0a",
+  "display_name": "Ruby 3.3.6, MiniTest 5.25",
+  "image_name": "ghcr.io/cyber-dojo-languages/ruby_mini_test:ad61d25",
   "visible_filenames": [
     "test_hiker.rb",
     "hiker.rb",

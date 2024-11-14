@@ -2,7 +2,7 @@ require_relative 'coverage'
 require_relative 'hiker'
 require 'minitest/autorun'
 
-class TestHiker < MiniTest::Test
+class TestHiker < Minitest::Test
 
   def test_global_function
     assert_equal 42, global_answer
