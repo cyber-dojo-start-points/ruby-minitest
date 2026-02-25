@@ -1,12 +1,13 @@
 {
   "display_name": "Ruby 4.0.1, MiniTest 6.0.0",
-  "image_name": "ghcr.io/cyber-dojo-languages/ruby_mini_test:ff4e2bb",
+  "image_name": "ghcr.io/cyber-dojo-languages/ruby_mini_test:da2b0dd",
   "visible_filenames": [
     "test_hiker.rb",
     "hiker.rb",
     "cyber-dojo.sh",
     "coverage.rb"
   ],
+  "rag_lambda": "red_amber_green.rb",
   "filename_extension": [
     ".rb"
   ],
