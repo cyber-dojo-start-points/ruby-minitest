@@ -1,4 +1,4 @@
-[![Github Action (main)](https://github.com/cyber-dojo-start-points/ruby-minitest/actions/workflows/main.yml/badge.svg)](https://github.com/cyber-dojo-start-points/ruby-minitest/actions)
+[![GitHub CI](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml)
 
 ### display_name="Ruby 4.0.1, MiniTest 6.0.0"
 ### image_name=[ghcr.io/cyber-dojo-languages/ruby_mini_test](https://github.com/cyber-dojo-languages/ruby-minitest/pkgs/container/ruby_mini_test)
