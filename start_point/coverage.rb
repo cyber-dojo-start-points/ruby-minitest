@@ -2,13 +2,13 @@ require 'simplecov'
 require 'simplecov-console'
 require 'stringio'
 
-$exception_raised = false
+$traffic_light_green = false
 
 module SimpleCov
   module Formatter
     class FileWriter
       def format(result)
-        unless amber_traffic_light?
+        if green_traffic_light?
           stdout = capture_stdout {
             SimpleCov::Formatter::Console.new.format(result)
           }
@@ -16,8 +16,8 @@ module SimpleCov
           IO.write("#{report_dir}/coverage.txt", stdout)
         end
       end
-      def amber_traffic_light?
-        $exception_raised
+      def green_traffic_light?
+        $traffic_light_green
       end
       def report_dir
         "#{ENV['CYBER_DOJO_SANDBOX']}/report"
@@ -39,12 +39,23 @@ end
 
 SimpleCov.command_name("MiniTest")
 SimpleCov.formatter = SimpleCov::Formatter::FileWriter
+
+# Without this, any run that ends in a failing test carries a line saying
+# SimpleCov stopped because of an error that is nothing to do with SimpleCov.
+# That is every red run, and it says nothing about the test that failed.
+SimpleCov.print_error_status = false
+
 SimpleCov.start
 
 at_exit do
-  # Can't use SimpleCov.at_exit; when the call reaches
-  # FileWriter.format() there is no longer an exception
-  # I'd like to only write the coverage report if the
-  # traffic-light is green but it seems there is no way.
-  $exception_raised = true
+  # at_exit handlers run in reverse registration order, so this one runs
+  # before the handler SimpleCov.start registered just above, and that is what
+  # lets it tell the formatter what happened.
+  #
+  # minitest's own handler, registered later still by require
+  # 'minitest/autorun', has by now run the tests and called exit, so $! holds
+  # the SystemExit it raised: successful when every test passed, unsuccessful
+  # when one failed. A file that would not even load leaves some other
+  # exception here instead, and no SystemExit at all.
+  $traffic_light_green = $!.is_a?(SystemExit) && $!.success?
 end
