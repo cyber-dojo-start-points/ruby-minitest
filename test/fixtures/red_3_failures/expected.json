@@ -1,0 +1,7 @@
+{
+  "match_counts": {
+    "^  [0-9]+\\) Failure:$": 3,
+    "^TestHiker#test_.* \\[test_hiker\\.rb:[0-9]+\\]:$": 3,
+    "^3 runs, 3 assertions, 3 failures, 0 errors, 0 skips$": 1
+  }
+}

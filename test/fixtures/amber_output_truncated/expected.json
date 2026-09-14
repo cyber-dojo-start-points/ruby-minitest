@@ -1,0 +1,7 @@
+{
+  "truncated": true,
+  "matches": [ "^debug: answer was called, i is 0$" ],
+  "match_counts": {
+    " runs, [0-9]+ assertions, ": 0
+  }
+}

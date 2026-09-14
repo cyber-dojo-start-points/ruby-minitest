@@ -1,0 +1,7 @@
+{
+  "match_counts": {
+    "^  1\\) Failure:$": 1,
+    "^TestAnswerSize#test_the_answer_is_three_digits_long \\[test_answer_size\\.rb:[0-9]+\\]:$": 1,
+    "^4 runs, 4 assertions, 1 failures, 0 errors, 0 skips$": 1
+  }
+}
